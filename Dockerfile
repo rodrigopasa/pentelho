@@ -22,5 +22,5 @@ RUN npm run build
 # Expose port
 EXPOSE 5000
 
-# Roda o db:push e então inicia a aplicação
-CMD ["sh", "-c", "npm run db:push && npm start"]
+# Comando de diagnóstico: Imprime as variáveis de ambiente e então tenta iniciar
+CMD ["sh", "-c", "echo '--- Variáveis de Ambiente Disponíveis ---' && printenv && echo '--- Fim das Variáveis ---' && echo '--- Iniciando Aplicação ---' && npm run db:push && npm start"]
