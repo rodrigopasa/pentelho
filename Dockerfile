@@ -7,6 +7,9 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
+# ADICIONE ESTA LINHA para instalar as dependências para o pacote "canvas"
+RUN apk add --no-cache build-base g++ cairo-dev jpeg-dev pango-dev giflib-dev
+
 # Install dependencies
 RUN npm ci --only=production
 
