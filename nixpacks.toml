@@ -1,8 +1,11 @@
 [phases.setup]
-nixPkgs = ['nodejs-20_x', 'npm-10_x']
+nixPkgs = ['nodejs-20_x', 'npm-10_x', 'python3', 'cairo', 'pango', 'libjpeg', 'giflib', 'librsvg', 'pixman', 'pkg-config', 'gcc', 'gnumake']
 
 [phases.build]
 cmds = ['npm ci', 'npm run build']
 
 [phases.start]
 cmd = 'npm start'
+
+[variables]
+PYTHON = 'python3'
