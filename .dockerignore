@@ -1,0 +1,14 @@
+node_modules
+.git
+.gitignore
+README.md
+replit.md
+.replit
+.upm
+.env
+uploads/*
+!uploads/.gitkeep
+dist
+*.log
+.DS_Store
+Thumbs.db
